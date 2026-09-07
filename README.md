@@ -1,22 +1,10 @@
-# 🚀 Trilha do Release — O Tabuleiro da Gestão Ágil
-
-<div align="center">
-
-![Next.js](https://img.shields.io/badge/Next.js-16.3.4-1C1917?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Zustand](https://img.shields.io/badge/Zustand-State_Management-764ABC?style=for-the-badge)
-![Vitest](https://img.shields.io/badge/Vitest-Unit_Tested-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
-![Web Audio API](https://img.shields.io/badge/Web_Audio_API-Procedural_SFX-F59E0B?style=for-the-badge)
-
-</div>
+# 🎲 Trilha do Release — O Tabuleiro da Gestão Ágil
 
 ---
 
-## 📌 Apresentação Acadêmica
+## 📌 Contexto do Projeto
 
-Este projeto foi desenvolvido como requisito de avaliação prática para o curso de pós-graduação **MBA em Gestão de Projetos de Software (MBA20-12)**.
+Este projeto foi desenvolvido como instrumento de aprendizado e avaliação para o curso de pós-graduação **MBA em Gestão de Projetos de Software (MBA20-12)**.
 
 - **Instituição:** Universidade Tecnológica Federal do Paraná (UTFPR)
 - **Disciplina:** Gestão de Projetos de Software
@@ -25,11 +13,17 @@ Este projeto foi desenvolvido como requisito de avaliação prática para o curs
 
 ---
 
-## 🎯 Sobre o Projeto
+## 💡 Propósito e Conceito
 
-**Trilha do Release** é um jogo de tabuleiro interativo web que simula o ciclo de vida de desenvolvimento de software em equipes ágeis (Scrum/Kanban). 
+O **Trilha do Release** é um jogo de tabuleiro interativo desenvolvido para transformar o aprendizado de Gestão Ágil de Software em uma experiência lúdica, envolvente e dinâmica.
 
-O objetivo dos jogadores é avançar pelas **40 casas do tabuleiro** enfrentando imprevistos reais baseados nas estatísticas do **Relatório CHAOS** (atrasos, dívidas técnicas, refatorações, escopo truncado, testes falhos ou acelerações com boas práticas de CI/CD), até alcançar o tão esperado **DEPLOY FINAL** na casa 40.
+### Qual o objetivo do jogo?
+Simular o percurso real de uma equipe de desenvolvimento ao longo do ciclo de vida de um software. Os jogadores assumem papéis no projeto e avançam por uma trilha de **40 casas**, enfrentando os desafios, imprevistos e sucessos típicos da gestão de projetos até alcançar a vitória com o **DEPLOY FINAL** na casa 40.
+
+### O que o jogo simula?
+- **Ritmo de Sprint:** A rolagem do dado de 6 faces representa a capacidade produtiva e as entregas da equipe a cada turno.
+- **Relatório CHAOS (Eventos do Projeto):** Casas especiais de evento ativam cartas de imprevistos inspirados em dados reais da indústria de software. As cartas simulam desde **acelerações** (boas práticas de CI/CD, automações e entrosamento) até **impedimentos** (dívida técnica, requisitos ambíguos, falhas em produção ou rotatividade de membros), exigindo resiliência e adaptação da equipe.
+- **Competição e Colaboração:** De 1 a 4 jogadores disputam o avanço na trilha, permitindo visualizar quem consegue gerenciar melhor os riscos da Sprint para chegar primeiro ao Deploy.
 
 ---
 
@@ -57,7 +51,7 @@ mindmap
 ### 2. Detalhamento das User Stories (US01 a US07)
 
 #### Épico 1: Tabuleiro e Movimentação
-Abrange a interface gráfica básica e as mecânicas fundamentais para o percurso da Sprint.
+Interface gráfica e mecânicas fundamentais para o percurso da Sprint.
 
 | ID | História de Usuário | Critérios de Aceitação |
 | :--- | :--- | :--- |
@@ -78,98 +72,16 @@ Gerencia o estado geral do jogo, entrada de usuários e a finalização.
 
 | ID | História de Usuário | Critérios de Aceitação |
 | :--- | :--- | :--- |
-| **US06** | **Como** Scrum Master (Host),<br>**Eu quero** definir a quantidade de jogadores e seus nomes ao iniciar o jogo,<br>**Para que** o sistema controle de quem é o turno e gerencie a partida corretamente. | 1. A tela inicial deve permitir o cadastro de 1 a 4 jogadores.<br>2. O sistema deve possuir um controle de estado que indica claramente na tela de cual jogador é o turno atual.<br>3. O botão "Rolar Dado" (US02) só deve processar a ação para o jogador que possui o turno. |
+| **US06** | **Como** Scrum Master (Host),<br>**Eu quero** definir a quantidade de jogadores e seus nomes ao iniciar o jogo,<br>**Para que** o sistema controle de quem é o turno e gerencie a partida corretamente. | 1. A tela inicial deve permitir o cadastro de 1 a 4 jogadores.<br>2. O sistema deve possuir um controle de estado que indica claramente na tela de qual jogador é o turno atual.<br>3. O botão "Rolar Dado" (US02) só deve processar a ação para o jogador que possui o turno. |
 | **US07** | **Como** jogador,<br>**Eu quero** ser notificado assim que eu alcançar ou ultrapassar a casa 40,<br>**Para** celebrar o Deploy bem-sucedido e ser declarado o vencedor da partida. | 1. Se a rolagem do dado (somada a possíveis efeitos de cartas) fizer o pino chegar à casa 40 ou além, o jogo deve ser pausado.<br>2. O sistema deve exibir uma tela de vitória parabenizando o jogador com a mensagem "Deploy Realizado!".<br>3. Deve ser exibido um botão para reiniciar a partida. |
 
 ---
 
-## ✨ Destaques de UX, Design e Recursos
+## 🎨 Experiência do Jogador (UX & Visual)
 
-- 🎨 **Estética Neo-Brutalista Cartoon 1930s:** Cores vibrantes, sombras pop (`box-shadow: 6px 6px 0px #1C1917`), bordas marcantes e tipografia vintage (`Luckiest Guy` & `Courier Prime`).
-- 🎲 **Animação do Dado com Suspense e Desaceleração:** O giro do dado desacelera suavemente e realiza provocações dramáticas (*tease faces*) na reta final da disputa perto do Deploy.
-- 🔊 **Efeitos Sonoros com Web Audio API:** Síntese sonora procedural de latência zero sem arquivos externos pesados (rolagem do dado, pulo do peão, evento, virada de carta, vinheta de turno e fanfarra de vitória). Inclui controle de Mute/Unmute no HUD com persistência em `localStorage`.
-- 📱 **Layout 100% Responsivo:** Trilha ajustada dinamicamente para telas Desktop (4 linhas), Tablet (6 linhas) e Mobile (10 linhas serpenteantes).
-- 🏷️ **Customização dos Jogadores:** Cadastro de 1 a 4 jogadores com escolha exclusiva de avatares (🚀 Foguete, ⚡ Raio, 👑 Coroa, 🛠️ Ferramentas, 🏆 Troféu) e paletas de cores vintage.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
-- **Biblioteca UI:** [React 19](https://react.dev/)
-- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
-- **Estilização:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **Gerenciamento de Estado:** [Zustand](https://zustand-demo.pmnd.rs/)
-- **Animações:** [Framer Motion](https://www.framer.com/motion/) & [Canvas-Confetti](https://www.npmjs.com/package/canvas-confetti)
-- **Ícones:** [Lucide React](https://lucide.dev/)
-- **Efeitos Sonoros:** Web Audio API (Sintetizador Procedural)
-- **Testes Unitários:** [Vitest](https://vitest.dev/)
-- **Linter:** ESLint
-
----
-
-## 📂 Estrutura do Projeto
-
-```text
-trilha-release/
-├── src/
-│   ├── app/                    # Layout raiz, fontes e favicon
-│   ├── components/
-│   │   ├── common/             # Ícones genéricos e utilitários UI
-│   │   └── game/               # Componentes do jogo (HUD, GameBoard, Pawn, Modais)
-│   ├── data/                   # Configuração do tabuleiro, cartas CHAOS e avatares
-│   ├── store/                  # Engine e estado global da partida (Zustand)
-│   ├── types/                  # Definições de tipos TypeScript
-│   └── utils/                  # Sintetizador de áudio Web Audio API (soundManager)
-├── public/                     # Ativos estáticos e favicon
-├── vitest.config.ts            # Configuração da suíte de testes Vitest
-└── package.json
-```
-
----
-
-## 🚀 Como Executar o Projeto Localmente
-
-### Pré-requisitos
-- Node.js (versão 18.x ou superior)
-- Gerenciador de pacotes `npm` ou `yarn`
-
-### Passos para execução:
-
-1. **Clonar o repositório:**
-   ```bash
-   git clone git@github.com:gustavofariaa/MBA20-12.git
-   cd MBA20-12
-   ```
-
-2. **Instalar as dependências:**
-   ```bash
-   npm install
-   ```
-
-3. **Iniciar o servidor de desenvolvimento:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Acessar a aplicação:**
-   Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
-
----
-
-## 🧪 Execução de Testes Automatizados
-
-O projeto conta com uma suíte de testes unitários desenvolvida com **Vitest** cobrindo todas as regras de negócio do motor do jogo (`useGameStore`).
-
-Para rodar a suíte de testes:
-
-```bash
-# Executar todos os testes unitários
-npx vitest run
-
-# Executar a verificação de código (ESLint)
-npm run lint
-```
+- **Identidade Vintage Cartoon Anos 30:** Interface inspirada nos desenhos clássicos da década de 1930, combinando nostalgia, dinamismo e uma linguagem visual marcante.
+- **Narrativa e Imersão:** Sons procedurais retro (dados rolando, pulo dos peões, abertura de cartas e vitória), animações dramáticas na rolagem de dados e cartas de evento detalhadas que conectam a jogabilidade aos conceitos de Gestão Ágil.
+- **Personalização de Partida:** Suporte para 1 a 4 jogadores com escolha individual de nomes, cores e avatares temáticos.
 
 ---
 
