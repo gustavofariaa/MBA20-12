@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-cartoon: var(--font-cartoon), cursive, sans-serif;
+  --font-retro: var(--font-retro-mono), monospace, serif;
+}
+
+:root {
+  --background: #FFF8E7;
+  --foreground: #1C1917;
+}
+
+body {
+  background-color: #FFF8E7;
+  color: #1C1917;
+  font-family: var(--font-retro);
+  overflow-x: hidden;
+}
+
+/* Vintage Cartoon Typography Class Helpers */
+.font-cartoon {
+  font-family: var(--font-cartoon);
+  letter-spacing: 0.04em;
+}
+
+.font-retro {
+  font-family: var(--font-retro);
+}
+
+/* Neo-Brutalist 1930s Pop Cartoon Shadow Helpers */
+.cartoon-card {
+  background-color: #FAF5E4;
+  border: 4px solid #1C1917;
+  box-shadow: 6px 6px 0px 0px #1C1917;
+  border-radius: 1rem;
+}
+
+.cartoon-btn {
+  background-color: #F59E0B;
+  color: #1C1917;
+  border: 4px solid #1C1917;
+  box-shadow: 4px 4px 0px 0px #1C1917;
+  border-radius: 0.75rem;
+  font-weight: 800;
+  transition: all 0.15s ease-in-out;
+}
+
+.cartoon-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #1C1917;
+}
+
+.cartoon-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #1C1917;
+}
+
+.cartoon-btn:disabled,
+.cartoon-btn:disabled:hover,
+.cartoon-btn:disabled:active {
+  background-color: #D6D3D1 !important;
+  color: #78716C !important;
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+/* Shimmer Background Beam Animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.25s infinite linear;
+}
+
+/* Vintage Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8E7;
+  border-left: 2px solid #1C1917;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F59E0B;
+  border: 2px solid #1C1917;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D97706;
+}
