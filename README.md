@@ -32,22 +32,18 @@ Simular o percurso real de uma equipe de desenvolvimento ao longo do ciclo de vi
 ### 1. Mapa de Histórias de Usuário
 
 ```mermaid
-graph TD
-    Root["🚀 Trilha do Release"]
-
-    Root --> E1["Épico 1: Tabuleiro e Movimentação"]
-    Root --> E2["Épico 2: Sistema de Eventos CHAOS"]
-    Root --> E3["Épico 3: Controle de Partida"]
-
-    E1 --> US01["US01: Renderização do Tabuleiro"]
-    E1 --> US02["US02: Rolagem de Dado"]
-    E1 --> US03["US03: Movimentação Virtual"]
-
-    E2 --> US04["US04: Renderização do Deck"]
-    E2 --> US05["US05: Aplicação de Efeitos"]
-
-    E3 --> US06["US06: Gestão de Turnos"]
-    E3 --> US07["US07: Condição de Vitória (Deploy)"]
+mindmap
+  root((Trilha do Release))
+    Épico 1: Tabuleiro e Movimentação
+      US01: Renderização do Tabuleiro
+      US02: Rolagem de Dado
+      US03: Movimentação Virtual
+    Épico 2: Sistema de Eventos CHAOS
+      US04: Renderização do Deck
+      US05: Aplicação de Efeitos
+    Épico 3: Controle de Partida
+      US06: Gestão de Turnos
+      US07: Condição de Vitória (Deploy)
 ```
 
 ---
